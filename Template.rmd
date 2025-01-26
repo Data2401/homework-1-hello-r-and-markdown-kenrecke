@@ -25,8 +25,6 @@ datasaurus_dozen %>%
 
 ### Exercise 2
 
-(The answers for this Exercise are given for you below. But you should clean up some of the narrative so that it only includes what you want to turn in.)
-
 First let's plot the data in the dino dataset:
 
 dino_data <- datasaurus_dozen %>%
@@ -50,21 +48,22 @@ dino_data %>%
 
 ### Exercise 3
 
-(Add code and narrative as needed. Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient. To finish, remember to clean up the narrative by removing these instructions.)
-
-
+Below is a plot of y vs. x for a star dataset.
 
 ```{r plot-star}
-
+dino_data %>%
+  summarize(r = plot(x, y))
 
 ```
 
-I'm some text, you should replace me with more meaningful text...
+Then below shows the calculated correlation coefficient between x and y for the star dataset.
  
 ```{r cor-star}
-
+dino_data %>%
+  summarize(r = cor(x, y))
 
 ```
+When you compare this value to the r of dino, you can see they are the same. 
 
 ### Exercise 4
 
