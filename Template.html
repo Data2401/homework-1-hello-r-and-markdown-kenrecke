@@ -367,13 +367,80 @@ library(datasauRus)</code></pre>
 <h3>Exercise 1</h3>
 <p>A datasaurus dozen has 12 data sets with 1846 rows and 3
 variables.</p>
+<p>datasaurus_dozen %&gt;%</p>
+<p>count(dataset) %&gt;%</p>
+<p>print(13)</p>
 </div>
+<div id="a-tibble" class="section level2">
+<h2># A tibble:</h2>
+</div>
+<div id="x-2" class="section level2">
+<h2># 13 x 2</h2>
+</div>
+<div id="dataset" class="section level2">
+<h2>dataset</h2>
+</div>
+<div id="section" class="section level2">
+<h2><chr></h2>
+</div>
+<div id="away" class="section level2">
+<h2>1 away</h2>
+</div>
+<div id="bullseye" class="section level2">
+<h2>2 bullseye</h2>
+</div>
+<div id="circle" class="section level2">
+<h2>3 circle</h2>
+</div>
+<div id="dino" class="section level2">
+<h2>4 dino</h2>
+</div>
+<div id="dots" class="section level2">
+<h2>5 dots</h2>
+</div>
+<div id="h_lines" class="section level2">
+<h2>6 h_lines</h2>
+</div>
+<div id="high_lines" class="section level2">
+<h2>7 high_lines</h2>
+</div>
+<div id="slant_down" class="section level2">
+<h2>8 slant_down</h2>
+</div>
+<div id="slant_up" class="section level2">
+<h2>9 slant_up</h2>
+</div>
+<div id="star" class="section level2">
+<h2>10 star</h2>
+</div>
+<div id="v_lines" class="section level2">
+<h2>11 v_lines</h2>
+</div>
+<div id="wide_lines" class="section level2">
+<h2>12 wide_lines</h2>
+</div>
+<div id="x_shape" class="section level2">
+<h2>13 x_shape</h2>
+</div>
+<div id="with-1" class="section level2">
+<h2># … with 1</h2>
+</div>
+<div id="more" class="section level2">
+<h2># more</h2>
+</div>
+<div id="variable" class="section level2">
+<h2># variable:</h2>
+</div>
+<div id="n" class="section level2">
+<h2># n <int></h2>
 <div id="exercise-2" class="section level3">
 <h3>Exercise 2</h3>
 <p>(The answers for this Exercise are given for you below. But you
 should clean up some of the narrative so that it only includes what you
 want to turn in.)</p>
 <p>First let’s plot the data in the dino dataset:</p>
+<p>dino_data &lt;- datasaurus_dozen %&gt;%</p>
+<p>filter(dataset == “dino”)</p>
 <pre class="r"><code>dino_data &lt;- datasaurus_dozen %&gt;%
   filter(dataset == &quot;dino&quot;)
 ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
@@ -408,6 +475,7 @@ appropriately.)</p>
 <p>(Add code and narrative as needed. To add R chunks either type out
 the backticks, curly braces, and the letter <code>r</code> or use the
 Insert chunk button above, with the green +C.)</p>
+</div>
 </div>
 
 
