@@ -5,7 +5,7 @@ date: "Data 2401"
 output: html_document
 ---
 
-MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT. 
+MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT.
 
 ### Load packages
 
@@ -14,22 +14,19 @@ library(tidyverse)
 library(datasauRus)
 ```
 
-
 ### Exercise 1
 
 A datasaurus dozen has 12 data sets with 1846 rows and 3 variables.
 
-datasaurus_dozen %>%
-  count(dataset) %>%
-  print(13)
+datasaurus_dozen %\>% count(dataset) %\>% print(13)
 
 ### Exercise 2
 
 First let's plot the data in the dino dataset:
 
-dino_data <- datasaurus_dozen %>%
+dino_data \<- datasaurus_dozen %\>%
 
-  filter(dataset == "dino")
+filter(dataset == "dino")
 
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
@@ -38,7 +35,6 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
-  
 And next calculate the correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
@@ -50,32 +46,37 @@ dino_data %>%
 
 Below is a plot of y vs. x for a star dataset.
 
-```{r plot-star}
-dino_data %>%
-  summarize(r = plot(x, y))
+```{r plot-star,  fig.height=3, fig.width=6}
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 
 ```
 
 Then below shows the calculated correlation coefficient between x and y for the star dataset.
- 
+
 ```{r cor-star}
-dino_data %>%
+star_data %>%
   summarize(r = cor(x, y))
 
 ```
-When you compare this value to the r of dino, you can see they are the same. 
+
+When you compare the value of r for the dinoset with r for the star dataset, they are
 
 ### Exercise 4
 
 (Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
 
-```{r}
-
+```{r plot-}
+dino_data %>%
+  summarize(r = cor(x, y))
 
 ```
 
 ```{r}
-
+dino_data %>%
+  summarize(r = cor(x, y))
 
 ```
 
