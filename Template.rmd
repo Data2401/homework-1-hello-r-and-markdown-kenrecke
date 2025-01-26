@@ -17,7 +17,7 @@ library(datasauRus)
 
 ### Exercise 1
 
-(Type your answer to Exercise 1 here. This exercise does not require any R code. **Remove notes like this in the final product that you turn in**)
+A datasaurus dozen has 12 data sets with 1846 rows and 3 variables.
 
 ### Exercise 2
 
